@@ -14,7 +14,6 @@ int main() {
    const int height = (width - 1) / 2;
    bool gens[2][width];
 
-   bool ruleBits[8] = {};
    int rule;
 
    while (true) {
@@ -54,8 +53,8 @@ int main() {
 
               if (gens[index][x + 1]) topLayer |= 1;
 
-              gens[index ^ 1][x] = ruleBits[topLayer];
-              std::cout << (ruleBits[topLayer] ? ALIVE_CELL : DEAD_CELL);
+              gens[index ^ 1][x] = rule & (1 << topLayer);
+              std::cout << (gens[index ^ 1][x] ? ALIVE_CELL : DEAD_CELL);
 
               topLayer &= 0b11;
               topLayer <<= 1;
@@ -65,8 +64,8 @@ int main() {
 
           index ^= 1;
 
-          gens[index][width - 1] = ruleBits[topLayer];
-          std::cout << (ruleBits[topLayer] ? ALIVE_CELL : DEAD_CELL) << '\n';
+          gens[index][width - 1] = rule & (1 << topLayer);
+          std::cout << (gens[index][width - 1] ? ALIVE_CELL : DEAD_CELL) << '\n';
       }
    }
 
