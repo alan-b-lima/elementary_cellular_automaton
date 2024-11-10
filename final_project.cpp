@@ -1,12 +1,7 @@
 #include <iostream>
 
-#define ALIVE_CELL (char)0x20
-#define DEAD_CELL (char)0xdb
-
-int mod(int num, int mod) {
-   int result = num % mod;
-   return result < 0 ? result + mod : result;
-}
+#define ALIVE_CELL " "
+#define DEAD_CELL "\u2588"
 
 int main() {
 
@@ -30,11 +25,6 @@ int main() {
 
       system("cls");
       std::cout << "Rule " << (rule & 0xff) << '\n';
-
-      for (int i = 0; i < 8; i++) {
-         ruleBits[i] = rule & 1;
-         rule >>= 1;
-      }
 
       for (int x = 0; x < width; x++)
          std::cout << (gens[0][x] ? ALIVE_CELL : DEAD_CELL);
