@@ -1,6 +1,6 @@
 # Elementary Cellular Automaton
 
-This is a project associated with a Algorithms and Data Structures I pratical assignment. This is a redone version in Go, the original was in C++. It has been done to get a first look into Go and it's syntax and way thing are structured.
+This is a project associated with an Algorithms and Data Structures I assignment. This is a redone version in Go, the original was in C++. It has been done to get a first look into Go and it's syntax and way thing are structured.
 
 # Overview
 
