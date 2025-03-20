@@ -12,19 +12,19 @@ The state of the $`n`$-th cell in the $`m`$-th generation is decided, excluding 
 
 ## Rule 90
 
-The binary representation of $`90`$ is $`01011010_2`$, let's have a default first generation. For edge-cases, we're gonna wrap around the other side. Dead is represented as white (▀) and alive as black ( ).
+The binary representation of $`90`$ is $`01011010_2`$, let's have a default first generation. For edge-cases, we're gonna wrap around the other side. Dead is represented as white (`▀`) and alive as black (` `).
 
 ```
 ▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀
 ```
 
-Given that, we see that most places all neighbors as $`0`$'s, an the $`0`$-th bit of $`90`$ is $`0`$. So, at those places, the cells evolve to $`0`$. The middle piece is more interesting, we have the top neighbor configurations (▀▀ ), (▀ ▀), and ( ▀▀), which respectively evaluate to the positions $`1`$, $`2`$ and $`4`$, in $`90`$, those bit are, respectively, $`1`$, $`0`$, and $`1`$. So the next generation, along with the last, will look:
+Given that, we see that most places all neighbors as $`0`$'s, an the $`0`$-th bit of $`90`$ is $`0`$. So, at those places, the cells evolve to $`0`$. The middle piece is more interesting, we have the top neighbor configurations (`▀▀ `), (`▀ ▀`), and (` ▀▀`), which respectively evaluate to the positions $`1`$, $`2`$ and $`4`$, in $`90`$, those bit are, respectively, $`1`$, $`0`$, and $`1`$. So the next generation, along with the last, will look:
 
 ```
 ██████████▀▄▀██████████
 ```
 
-Now, for the next generation, the top neighbor configurations are (▀▀▀), (▀▀ ), (▀ ▀), ( ▀ ), and ( ▀▀), those correspond respectively to the bits $`0`$, $`1`$, $`0`$, $`0`$, and $`1`$, this means:
+Now, for the next generation, the top neighbor configurations are (`▀▀▀`), (`▀▀ `), (`▀ ▀`), (` ▀ `), and (` ▀▀`), those correspond respectively to the bits $`0`$, $`1`$, $`0`$, $`0`$, and $`1`$, this means:
 
 ```
 ██████████▀▄▀██████████
